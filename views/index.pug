@@ -1,0 +1,16 @@
+extends layout
+
+block content
+    form(action="/" method="post")
+        table
+            tr
+                th
+                    label(for="accname") Account Name:
+                th
+                    input(type="text" name="accname" id="accname")
+            tr
+                th
+                th
+                    input(type="submit")
+
+    p #{error}

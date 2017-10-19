@@ -1,0 +1,35 @@
+extends layout
+
+block content
+    form(action="/colorpicker" method="post")
+        input(type="hidden",value=charID name="charID" id="charID")
+        table
+            tr
+                th
+                    label(for="itemname") Item Name:
+                th
+                    select(name="itemname" id="itemname")
+                        each item, i in items
+                            option(value=item.id class=item.colors)= item.name
+            tr
+                th
+                    label(for="color1") First color slot:
+                th
+                    input(type="color" name="color1" id="color1" value="#ff0000")
+            tr
+                th
+                    label(for="color2") Second color slot:
+                th
+                    input(type="color" name="color2" id="color2" value="#ff0000")
+            tr
+                th
+                    label(for="color3") Third color slot:
+                th
+                    input(type="color" name="color3" id="color3" value="#ff0000")
+            tr
+                th
+                th
+                    input(type="submit")
+    p #{error}
+    script(src="/js/jquery-3.1.1.min.js")
+    script(src="/js/script.js")

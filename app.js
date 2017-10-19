@@ -78,7 +78,8 @@ function getCharID(charname, callback){
     conn.connect()
         .then(function () {
             var req = new sql.Request(conn);
-            req.query("select * from CharacterInfo where Name = N'" + charname + "'")
+            req.input('charname', sql.NVarChar, charname);
+            req.query("select * from CharacterInfo where Name = @charname")
                 .then(function (result, err) {
                     var charID = result.recordset[0][Object.keys(result.recordset[0])[0]];
                     conn.close();

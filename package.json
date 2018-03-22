@@ -1,28 +1,29 @@
 {
-  "name": "forms-in-nodejs",
+  "name": "Dye-System",
   "version": "1.0.0",
-  "description": "This project demonstrates how to use forms in Node.js",
-  "main": "server.js",
+  "description": "Manipulate item dyes from a webserver",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/abbassoftware/forms-in-nodejs.git"
+    "url": "https://github.com/Yentis/Dye-System.git"
   },
-  "author": "Abbas",
-  "license": "ISC",
+  "author": "Yentis",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/abbassoftware/forms-in-nodejs/issues"
+    "url": "https://github.com/Yentis/Dye-System/issues"
   },
-  "homepage": "https://github.com/abbassoftware/forms-in-nodejs",
+  "homepage": "https://github.com/Yentis/Dye-System",
   "dependencies": {
-    "async": "^2.5.0",
-    "body-parser": "^1.18.2",
     "express": "^4.16.1",
-    "formidable": "^1.1.1",
+    "cookie-parser": "^1.4.3",
     "mssql": "^4.1.0",
+    "async": "^2.5.0",
+    "edge": "github:tjanczuk/edge",
+    "bcrypt": "^1.0.3",
     "pug": "^2.0.0-rc.4"
   }
 }

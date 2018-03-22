@@ -1,0 +1,22 @@
+extends layout
+
+block content
+    h1 #{curpage}
+
+    form(action= post method="post")
+        table
+            tr
+                th
+                    label(for="accname") Account Name:
+                th
+                    input(type="text" name="accname" id="accname" required)
+            tr
+                th
+                    label(for="password") Secondary Password:
+                th
+                    input(type="password" name="password" required)
+            tr
+                th
+                th
+                    input(type="submit")
+    p #{error}

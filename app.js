@@ -18,8 +18,8 @@ const PORT = 8080;
 
 var config = {
     user: 'sa',
-    password: '',
-    server: '',
+    password: 'root',
+    server: 'vindictus',
     database: 'heroes'
 };
 
